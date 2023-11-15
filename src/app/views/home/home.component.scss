@@ -1,0 +1,35 @@
+.home {
+  color: black;
+  word-wrap: break-word;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero--img {
+  flex-basis: 250px;
+  max-height: 80vh;
+  display: none;
+}
+
+@media screen and (min-width: 940px) {
+  .hero--img {
+    display: block;
+  }
+}
+
+.hero--info {
+  min-height: 80vh;
+  flex-direction: column;
+  & h1 {
+    line-height: 4rem;
+  }
+}
+

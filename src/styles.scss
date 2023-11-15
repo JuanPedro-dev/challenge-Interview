@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  // Primary de Angular Material
+  --primary: rgb(63, 81, 181);
+}
+
+// Utilidades
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2 {
+  font-size: 3rem !important;
+}
+
+.h3 {
+  font-size: 2rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mr-2 {
+  margin-right: 2rem !important;
+}

@@ -23,6 +23,7 @@
     "apexcharts": "^3.44.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "uikit": "^3.17.8",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
