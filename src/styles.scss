@@ -4,13 +4,17 @@ html,
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   min-height: 100vh;
+}
+
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 :root {
   // Primary de Angular Material
   --primary: rgb(63, 81, 181);
+  --primary-dark: #353a60;
 }
 
 // Utilidades
@@ -29,10 +33,30 @@ body {
   font-size: 2rem !important;
 }
 
+.m-2 {
+  margin-bottom: 2rem !important;
+}
+
 .mb-2 {
   margin-bottom: 2rem !important;
 }
 
 .mr-2 {
   margin-right: 2rem !important;
+}
+
+.primary{
+  color: var(--primary) !important;
+}
+
+.primary-dark{
+  color: var(--primary-dark) !important;
+}
+
+.text-light{
+  color: #f3f3f3;
+}
+
+.text-center{
+  text-align: center;
 }
