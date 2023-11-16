@@ -8,7 +8,7 @@ import { LoginComponent } from './login.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import  {MatInputModule } from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
   ],
 })
 export class LoginModule {}

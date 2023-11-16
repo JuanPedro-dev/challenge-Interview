@@ -1,0 +1,70 @@
+.login {
+  background: url("../../../assets/img/background.jpg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../../../assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.login-welcome {
+  flex: 1 1 auto;
+  max-width: 520px;
+}
+
+.tittle {
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-form {
+  padding: 3rem 4rem;
+  flex: 1 1 auto;
+  max-width: 400px;
+  background-color: var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  gap: 1rem;
+}
+
+.login-form-keyboard {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  justify-self: center;
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.6rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+mat-form-field {
+  padding-right: 1rem;
+  width: 100%;
+}
+
+mat-icon {
+  padding-right: 1rem;
+}
+
+.register {
+  cursor: pointer;
+}

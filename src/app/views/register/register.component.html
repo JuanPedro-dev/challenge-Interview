@@ -1,1 +1,61 @@
-<p>register works!</p>
+<section class="login">
+
+    <div class="login-form" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+        <h1 class="text-light">LOGO</h1>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin" class="form">
+            <mat-form-field>
+                <mat-label> Tipo de Documento </mat-label>
+                <input type="text" placeholder="Seleccione" aria-label="Number" matInput
+                    [formControl]="docTypeFormControl" [matAutocomplete]="auto" />
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+                </mat-autocomplete>
+                <span *ngIf="docTypeFormControl.value" matSuffix mat-icon-button (click)="docTypeFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </span>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Número de Documento</mat-label>
+                <input matInput type="number" [formControl]="dniFormControl" name="name">
+                <span *ngIf="dniFormControl.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="dniFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </span>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Clave</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordFormControl">
+                <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </span>
+                <mat-error
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <button class="btn primary-dark">Registrarse</button>
+        </form>
+
+        <div class="login-form-keyboard">
+            <mat-icon class="text-light" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="keyboard"></mat-icon>
+            <p class="text-light" (click)="abrirTeclado()">Teclado Virtual</p>
+        </div>
+
+        <h4 class="text-light text-center register">¿Ya tienes cuenta? <strong routerLink="/login">Iniciar Sesión</strong></h4>
+    </div>
+
+    <div class="login-welcome" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+        <h1 class="h2 tittle" routerLink="/home">Regístrate en <span class="primary-dark">Unicomer</span></h1>
+    </div>
+
+</section>

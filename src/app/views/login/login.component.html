@@ -1,9 +1,9 @@
 <section class="login">
-    <div class="login-welcome">
-        <h1 class="h2 tittle">Bienvenido a <span class="primary-dark">Unicomer</span></h1>
+    <div class="login-welcome" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+        <h1 class="h2 tittle" routerLink="/home">Bienvenido a <span class="primary-dark">Unicomer</span></h1>
     </div>
 
-    <div class="login-form">
+    <div class="login-form" uk-scrollspy="cls: uk-animation-slide-right; repeat: true"> 
         <h1 class="text-light">LOGO</h1>
 
         <form (ngSubmit)="onSubmit()" [formGroup]="formLogin" class="form">
