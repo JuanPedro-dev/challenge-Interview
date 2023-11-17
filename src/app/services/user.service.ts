@@ -9,7 +9,7 @@ import { User } from '../interfaces/user';
 export class UserService {
   private http: HttpClient = inject(HttpClient);
 
-  private apiServerUrl = 'http://localhost:8080';
+  private apiServerUrl = '';
   private entity: string = 'users';
 
   /**

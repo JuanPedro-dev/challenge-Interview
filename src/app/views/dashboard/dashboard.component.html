@@ -9,9 +9,10 @@
         
         <!-- aca reemplazaría por otro <router-outlet></router-outlet> y cambiaría la navegación según el menu navigator-->
         <div class="layout">
-            <app-card></app-card>
-            <app-chart></app-chart>
-            <app-chart></app-chart>
+            <app-card [card]="user.card" ></app-card>
+            <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="user.card.creditos" [tittle]="'Ingresos'"></app-chart>   
+            <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="user.card.debitos" [tittle]="'Egresos'"></app-chart>   
+           
             <app-balance></app-balance>
             <app-transactions></app-transactions>
             <app-payment-table></app-payment-table>

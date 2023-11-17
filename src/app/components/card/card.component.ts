@@ -10,11 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
   // TODO: declarar luego con card: Card 
-  @Input() card = {
-    id: '****-****-****-1234',
-    name: 'john Doe',
+  @Input() card: any = {
+    id: '',
     balance: 0,
-    expiration: new Date()
+    expiration: new Date(),
+    debitos: [],
+    creditos: []
   }
 
 

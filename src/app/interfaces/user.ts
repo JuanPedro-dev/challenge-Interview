@@ -1,14 +1,13 @@
-interface transaction {
+export interface transaction {
     date: Date;
     amount: number;
 }
 
-interface debit {
+export interface debit {
     transactions: transaction[];
 }
 
-
-interface credit {
+export interface credit {
     transactions: transaction[];
 }
 
@@ -26,5 +25,6 @@ export interface User {
   name: string;
   password: string;
   balance: number;
+  card: Card[]
 }
 

@@ -1,1 +1,26 @@
-<p>chart works!</p>
+<div class="container" >
+
+    <div class="container-top">
+      <div class="d-center">
+        <mat-icon [ngStyle]="myBgc" aria-hidden="false" aria-label="Example home icon" fontIcon="{{nameIcon}}"></mat-icon>
+        <div>
+          <p class="m-0">{{tittle}}</p>
+          <p class="m-0"><strong>{{ value | currency}}</strong></p>
+        </div>
+      </div>
+      <p class="m-0" [ngStyle]="{'color': valuePercentage >= 0 ? 'green' : 'red'}">{{valuePercentage}}%</p>
+    </div>
+  
+    <apx-chart
+      [series]="series"
+      [chart]="chart"
+      [dataLabels]="dataLabels"
+      [yaxis]="yaxis"
+      [xaxis]="xaxis"
+      [grid]="grid"
+      [colors]="colorsInput"
+      [autoUpdateSeries]="true"
+    ></apx-chart>
+    
+  </div>
+  
