@@ -13,7 +13,7 @@
             <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="user.card.creditos" [tittle]="'Ingresos'"></app-chart>   
             <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="user.card.debitos" [tittle]="'Egresos'"></app-chart>   
            
-            <app-balance></app-balance>
+            <app-balance [card]="user.card"></app-balance>
             <app-transactions></app-transactions>
             <app-payment-table></app-payment-table>
         </div>

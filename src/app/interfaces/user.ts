@@ -13,6 +13,7 @@ export interface credit {
 
 export interface Card {
     id: string;
+    alias: string;
     key: number;
     balance: number;
     debits: debit[];

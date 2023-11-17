@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit, OnDestroy{
     password: '',
     card : {
       id: '****-****-****-1234',
-      name: 'Luz D. Denny',
+      alias: 'Luz D. Denny',
       balance: 5_321_656,
       expiration: new Date(),
       debitos: [10000.55, 5000.12, 12000.16, 6000.69, 18000.0, 10000.04, 8000],
