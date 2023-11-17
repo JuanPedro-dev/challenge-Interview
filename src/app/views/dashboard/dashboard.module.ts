@@ -10,6 +10,8 @@ import { PaymentTableComponent } from 'src/app/components/payment-table/payment-
 import { TransactionsComponent } from 'src/app/components/transactions/transactions.component';
 
 import { RouterLink } from '@angular/router';
+import { CardComponent } from 'src/app/components/card/card.component';
+import { ChartComponent } from 'src/app/components/chart/chart.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { RouterLink } from '@angular/router';
     NavbarComponent,
     PaymentTableComponent,
     TransactionsComponent,
-    RouterLink
+    CardComponent,
+    ChartComponent,
+    RouterLink,
   ]
 })
 export class DashboardModule { }

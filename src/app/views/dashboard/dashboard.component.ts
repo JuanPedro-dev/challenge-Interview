@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  public user: User = {
+    id: '',
+    name: 'John Doe',
+    password: '',
+    balance: 0,
+  }
+
+
 
 }

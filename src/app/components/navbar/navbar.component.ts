@@ -14,5 +14,5 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  @Input() userName: string = 'John Doe'
+  @Input() userName: string = ''
 }

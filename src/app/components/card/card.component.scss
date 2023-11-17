@@ -1,0 +1,40 @@
+p {
+  margin: 0;
+}
+
+.card {
+  border-radius: 15px;
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 1rem;
+  min-width: 250px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.circle1 {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #ffffffa4;
+  z-index: 10;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+.circle2 {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #ffffffa4;
+  z-index: 10;
+  top: 1.5rem;
+  right: 2.7rem;
+}

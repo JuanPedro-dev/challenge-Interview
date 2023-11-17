@@ -3,16 +3,19 @@
     <app-aside class="dashboard-navigator desktop"></app-aside>
     
     <div class="dashboard-main">
-        <app-navbar></app-navbar>
+        <app-navbar [userName]="user.name"></app-navbar>
 
-        <!-- aca reemplazaría por otro <router-outlet></router-outlet> y cambiaría la navegación según el menu navigator-->
-
-        <h1>Inicio</h1>
-
-        <app-balance></app-balance>
+        <h1 class="title">Inicio</h1>
         
-        <app-payment-table></app-payment-table>
-        <app-transactions></app-transactions>
+        <!-- aca reemplazaría por otro <router-outlet></router-outlet> y cambiaría la navegación según el menu navigator-->
+        <div class="layout">
+            <app-card></app-card>
+            <app-chart></app-chart>
+            <app-chart></app-chart>
+            <app-balance></app-balance>
+            <app-transactions></app-transactions>
+            <app-payment-table></app-payment-table>
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,20 @@
+<div class="card">
+    <h6 class="text-gray m-0">Mi saldo</h6>
+    <p class="m-0">{{card.balance | currency}}</p>
+
+    <p class="uk-text-right mb-2"> **** **** **** {{ card.id.slice(-4) }} </p>
+    
+    <div class="row">
+        <p class="text-gray">Titular Tarjeta </p>
+        <p class="text-gray">Valido hasta</p> 
+    </div>
+    <div class="row">
+        <p>{{ card.name }}</p>
+        <p>{{ card.expiration | date:'MM-yyyy' }}</p>
+    </div>
+    
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+</div>

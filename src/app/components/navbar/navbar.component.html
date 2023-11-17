@@ -1,16 +1,21 @@
 <mat-toolbar class="navbar" color="primary">
     <div class="mobile">
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>menu</mat-icon>
-        </button>
         <button mat-icon-button >
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
         </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
     </div>
 
-    <div class="d-flex gap-1">
+    <div class="desktop search">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+        <input type="text" placeholder="Busca aquí">
+    </div>
+
+    <div class="d-flex gap-1 desktop">
         <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="settings"></mat-icon>
-        <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>     
+        <mat-icon class="menu-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="notifications"></mat-icon>     
         <img class="menu-icon" src="../../../assets/img/img-profile.png" alt="profile img"> 
         <span class="user-name container-center">{{ userName }}</span>
     </div>

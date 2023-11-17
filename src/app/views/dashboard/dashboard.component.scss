@@ -10,8 +10,13 @@
 
 .dashboard-main {
   flex: 1 1 auto;
+  padding: 0 2rem;
 }
 
+.layout{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
 //

@@ -1,13 +1,29 @@
+p {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: inherit;
   color: var(--primary);
+  padding: 0;
+  
 }
 
-p{
-    margin: 0;
+.search {
+  background-color: white;
+  padding: .5rem;
+  border-radius: 2rem;
+  & input{
+    border: none;
+    padding-left: 1rem;
+  }
+}
+
+input:focus {
+  outline: none; 
 }
 
 .menu-icon {
@@ -21,8 +37,28 @@ p{
   cursor: pointer;
 }
 
-.user-name{
+.user-name {
   color: black;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
 }
