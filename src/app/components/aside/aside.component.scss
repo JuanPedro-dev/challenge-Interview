@@ -1,0 +1,37 @@
+.navigator {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.tittle {
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 1rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigator-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.selected {
+  background-color: var(--primary-dark);
+  border-radius: 50%;
+  color: #fff;
+  outline: 5px solid var(--primary-dark);
+}

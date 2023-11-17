@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  color: var(--primary);
+}
+
+p{
+    margin: 0;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-name{
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
