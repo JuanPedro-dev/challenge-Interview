@@ -10,7 +10,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 
-import { invoiceMock } from 'src/app/mocks/invoices';
+import { invoiceMock } from 'src/app/mocks/invoices.mock';
 import { Invoice } from 'src/app/interfaces/invoices';
 
 @Component({

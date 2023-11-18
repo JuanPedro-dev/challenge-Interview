@@ -15,7 +15,7 @@ import {
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { MatIconModule } from '@angular/material/icon';
-import { Card } from 'src/app/interfaces/user';
+import { Card } from 'src/app/interfaces/client';
 
 @Component({
   selector: 'app-balance',
@@ -36,13 +36,14 @@ export class BalanceComponent implements OnInit {
   public xaxis!: ApexXAxis;
 
   @Input() card: Card = {
-    id: '',
+    id: 0,
     alias: '',
-    key: 0,
+    key_security: 0,
     balance: 0,
     debits: [],
     credits: [],
-    expiration: new Date()
+    expiration: new Date(),
+    card_number: ''
   };  
 
   public myBgc: object = {};

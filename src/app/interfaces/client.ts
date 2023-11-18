@@ -1,12 +1,16 @@
+import { Invoice } from "./invoices";
+
 export interface transaction {
+  id: number;
   date: Date;
   amount: number;
 }
 
 export interface Card {
-  id: string;
+  id: number;
+  card_number: string;
   alias: string;
-  key: number;
+  key_security: number;
   balance: number;
   debits: transaction[];
   credits: transaction[];
@@ -15,9 +19,10 @@ export interface Card {
 
 export class Card implements Card {
   constructor(
-    public id: string,
+    public id: number,
+    public card_number: string,
     public alias: string,
-    public key: number,
+    public key_security: number,
     public balance: number,
     public debits: transaction[],
     public credits: transaction[],
@@ -25,26 +30,29 @@ export class Card implements Card {
   ) {}
 }
 
-export interface User {
-  id: string;
+export interface Client {
+  id: number;
   name: string;
   password: string;
   balance: number;
-  card: Card[];
+  cards: Card[];
+  invoices: Invoice[]
 }
 
-export class User implements User {
+export class Client implements Client {
   constructor(
-    public id: string,
+    public id: number,
     public name: string,
     public password: string,
     public balance: number,
-    public card: Card[]
+    public cards: Card[],
+    public invoices: Invoice[],
   ) {
     this.id = id;
     this.name = name;
     this.password = password;
     this.balance = balance;
-    this.card = card;
+    this.cards = cards;
+    this.invoices = invoices;
   }
 }

@@ -12,7 +12,7 @@ import {
 } from 'ng-apexcharts';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { transaction } from 'src/app/interfaces/user';
+import { transaction } from 'src/app/interfaces/client';
 
 @Component({
   selector: 'app-chart',
