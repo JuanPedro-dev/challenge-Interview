@@ -51,9 +51,10 @@ input:focus {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0 2rem;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .mobile {
     display: none;
   }

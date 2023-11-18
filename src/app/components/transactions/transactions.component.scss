@@ -1,0 +1,26 @@
+.transactions{
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 1rem 0 1rem 1rem;
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+mat-icon{
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

@@ -1,5 +1,4 @@
 <div class="dashboard">
-    
     <app-aside class="dashboard-navigator desktop"></app-aside>
     
     <div class="dashboard-main">
@@ -8,13 +7,18 @@
         <h1 class="title">Inicio</h1>
         
         <!-- aca reemplazaría por otro <router-outlet></router-outlet> y cambiaría la navegación según el menu navigator-->
-        <div class="layout">
-            <app-card [card]="user.card[0]" ></app-card>
-            <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="user.card[0].credits" [tittle]="'Ingresos'"></app-chart>   
-            <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="user.card[0].debits" [tittle]="'Egreso'"></app-chart>   
-           
-            <app-balance [card]="user.card[0]"></app-balance>
-            <app-transactions></app-transactions>
+        <div>
+            <div class="layout-row">
+                <app-card [card]="user.card[0]" ></app-card>
+                <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="user.card[0].credits" [tittle]="'Ingresos'"></app-chart>   
+                <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="user.card[0].debits" [tittle]="'Egreso'"></app-chart>   
+            </div>
+
+            <div class="layout-row">
+                <app-balance [card]="user.card[0]"></app-balance>
+                <app-transactions></app-transactions>
+            </div>
+
             <app-payment-table></app-payment-table>
         </div>
     </div>
