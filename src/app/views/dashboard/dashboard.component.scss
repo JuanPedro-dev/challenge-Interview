@@ -8,17 +8,17 @@
   width: 250px;
 }
 
-.dashboard-main{
+.dashboard-main {
   width: 100%;
 }
 
-.title{
+.title {
   padding: 1rem 0 0 0;
   font-weight: 600;
   text-align: center;
 }
 
-.layout-row{
+.layout-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,19 +27,26 @@
   margin-bottom: 2rem;
 }
 
-app-card, app-chart, app-balance, app-transactions{
+app-card,
+app-chart,
+app-balance,
+app-transactions,
+app-payment-table {
   flex: 1 1 300px;
 }
 
-app-transactions{
+app-transactions,
+app-payment-table {
   overflow-x: auto;
 }
 
-app-card, app-chart{
+app-card,
+app-chart {
   max-width: 300px;
 }
 
-// MQ 
+
+// MQ
 .desktop {
   display: none;
 }
@@ -55,7 +62,7 @@ app-card, app-chart{
     flex: 1 1 auto;
     padding: 0 2rem;
   }
-  .title{
+  .title {
     padding: 1rem 0 0 0;
     font-weight: 600;
     text-align: left;

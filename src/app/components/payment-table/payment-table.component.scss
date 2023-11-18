@@ -1,0 +1,38 @@
+.transactions {
+  min-width: 600px;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.btn-pay {
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  accent-color: #3f51b5;
+}
+
+.barra {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #3f51b5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}

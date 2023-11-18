@@ -12,7 +12,7 @@ import { transaccionesMock } from 'src/app/mocks/transaction.mock';
 @Component({
   selector: 'app-transactions',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatTableModule,],
+  imports: [CommonModule, MatIconModule, MatTableModule],
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.scss']
 })
@@ -27,7 +27,7 @@ export class TransactionsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // TODO: API, subscribirse, traer la info, guardarla en Transaction
     this.dataSource = transaccionesMock;
-    console.log(this.dataSource);
+
   }  
 
   ngOnDestroy() {

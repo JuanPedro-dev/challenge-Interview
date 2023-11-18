@@ -1,1 +1,56 @@
-<p>payment-table works!</p>
+<div class="payments">
+
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="icon">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element" [ngStyle]="checked ==true ? {position: 'relative'}:{}">
+                <div *ngIf="checked" class="barra"></div>
+                <mat-checkbox [(ngModel)]="checked" color="primary" [disabled]="!element.isPayed"></mat-checkbox>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="global">
+            <th mat-header-cell *matHeaderCellDef> Monto Total</th>
+            <td mat-cell *matCellDef="let element"> {{element.global | currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fees">
+            <th mat-header-cell *matHeaderCellDef>Cuotas</th>
+            <td mat-cell *matCellDef="let element"> Cuota {{element.fees_current}}/{{element.fees_global}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Fecha de emisión</th>
+            <td mat-cell *matCellDef="let element">{{element.date_issued | date:'dd-MM-YY'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="parcial">
+            <th mat-header-cell *matHeaderCellDef>Mensual</th>
+            <td mat-cell *matCellDef="let element"> {{element.parcial | currency}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="rate">
+            <th mat-header-cell *matHeaderCellDef>Tasa interés</th>
+            <td mat-cell *matCellDef="let element"> {{element.rate}} %</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <button class="btn-pay"
+                    [ngStyle]="element.isPayed == true ? {background: '#899baa'} : {background: '#353a60'}">{{
+                    element.isPayed ? 'Pagar' : 'Cancelado'}}
+                </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="setting">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td class="pointer" mat-cell *matCellDef="let element"> <mat-icon [ngStyle]="{color: 'black'}" aria-hidden="false"
+                    fontIcon="more_horiz" ></mat-icon> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

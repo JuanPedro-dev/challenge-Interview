@@ -3,7 +3,7 @@ import { User } from '../interfaces/user';
 export const userMock: User = {
   id: '12345',
   name: 'Luz Doe Denny',
-  password: 'your_password_here',
+  password: '1234',
   balance: 5321656,
   card: [
     {
@@ -27,7 +27,7 @@ export const userMock: User = {
         { date: new Date(2023, 11, 21), amount: 8000.04 },
         { date: new Date(2023, 11, 22), amount: 800 },
       ],
-      expiration: new Date(),
+      expiration: new Date(2027, 11, 22),
     },
   ],
 };
