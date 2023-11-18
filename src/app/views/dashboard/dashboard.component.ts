@@ -16,19 +16,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
   
   
   ngOnInit(): void {
-    // TODO: API, subscribirse, traer la info, guardarla en user
-    this.user = userMock;
-    let userFromApi: any; 
     const subscription = this.userService.getClientById(1).subscribe({
       next: (client: Client) => { 
-        userFromApi =client;
-        console.log(client);
+        this.user = userMock;
       },
       error: (err) => console.log(err),
-      complete: () => console.log("fin de llamada")
     }); 
-
-
     this.subs.add(subscription);
   }
 

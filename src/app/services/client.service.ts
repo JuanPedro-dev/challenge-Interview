@@ -9,7 +9,7 @@ import { Client } from '../interfaces/client';
 export class ClientService {
   private http: HttpClient = inject(HttpClient);
 
-  private apiServerUrl = 'localhost:8080';
+  private apiServerUrl = 'http://192.168.1.6:8080';
   private entity: string = 'clients';
 
   /**
@@ -84,4 +84,5 @@ export class ClientService {
       return of(result as T);
     };
   }
+  
 }
