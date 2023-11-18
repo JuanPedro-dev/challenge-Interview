@@ -12,6 +12,7 @@ import {
 } from 'ng-apexcharts';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { transaction } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-chart',
@@ -31,7 +32,7 @@ export class ChartComponent implements OnInit {
   @Input() colorsInput: string[] = [];
   @Input() nameIcon: string = 'home';
   @Input() tittle: string = '';
-  @Input() dataSeries: number[] = [];  
+  @Input() dataSeries: transaction[] = [];  
 
   public myBgc: object = {};
   public value: number = 0;
@@ -46,8 +47,11 @@ export class ChartComponent implements OnInit {
   }
 
   public initChartData(): void {
+    let data: number[] = []; 
+
     for(let i=0; i < this.dataSeries.length; i++){
-      this.value += this.dataSeries[i];
+      this.value += this.dataSeries[i].amount;
+      data.push(this.dataSeries[i].amount);
     }
 
     this.chart= {
@@ -60,7 +64,7 @@ export class ChartComponent implements OnInit {
     this.series = [
       {
         name: this.tittle,
-        data: this.dataSeries
+        data: data
       },
     ];    
     this.yaxis = { show: false };

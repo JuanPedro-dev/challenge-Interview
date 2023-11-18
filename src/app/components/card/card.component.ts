@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Card } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-card',
@@ -10,13 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
   // TODO: declarar luego con card: Card 
-  @Input() card: any =  {
+  @Input() card: Card =  {
     id: '',
     alias: '',
+    key: 0,
     balance: 0,
-    expiration: new Date(),
-    debitos: [],
-    creditos: []
+    debits: [],
+    credits: [],
+    expiration: new Date()
   }
 
 
