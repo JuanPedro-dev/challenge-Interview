@@ -1,16 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { Subscription } from 'rxjs';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatCardModule} from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
 
-import { invoiceMock } from 'src/app/mocks/invoices.mock';
 import { Invoice } from 'src/app/interfaces/invoices';
 
 @Component({
@@ -28,10 +26,7 @@ import { Invoice } from 'src/app/interfaces/invoices';
   templateUrl: './payment-table.component.html',
   styleUrls: ['./payment-table.component.scss'],
 })
-export class PaymentTableComponent implements OnInit, OnDestroy {
-  // private invoiceService: InvoiceService = inject(InvoiceService);
-  private subs: Subscription = new Subscription();
-
+export class PaymentTableComponent implements OnInit {
   displayedColumns: string[] = [
     'icon',
     'global',
@@ -42,15 +37,17 @@ export class PaymentTableComponent implements OnInit, OnDestroy {
     'action',
     'setting',
   ];
-  dataSource: Invoice[] = [];
-  checked = false;
+
+  dataSource!: Invoice[];
+  @Input() dataInvoices!: Invoice[];
+checked: any;
 
   ngOnInit(): void {
-    // TODO: API, subscribirse, traer la info, guardarla en invoice
-    this.dataSource = invoiceMock;
+    this.dataSource = this.dataInvoices;
   }
 
-  ngOnDestroy() {
-    this.subs.unsubscribe();
-  }
+  onCheckboxChange(element: any) {
+    element.isChecked = !element.isChecked;
+}
+
 }

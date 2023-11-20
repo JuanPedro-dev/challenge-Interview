@@ -1,0 +1,138 @@
+{
+  "name": "Luz Doe Denny",
+  "password": "1234",
+  "balance": 5321656,
+  "cards": [
+    {
+      "card_number": "****-****-****-1234",
+      "alias": "Luz D. Denny",
+      "key_security": 123,
+      "balance": 5321656,
+      "expiration": "2027-12-22"
+    }
+  ],
+  "invoices": [
+    {
+      "global": 400000,
+      "parcial": 25000,
+      "fees_global": 16,
+      "fees_current": 2,
+      "date_issued": "2023-12-18",
+      "rate": 10,
+      "isPayed": false
+    },
+    {
+      "global": 300000,
+      "parcial": 20000,
+      "fees_global": 14,
+      "fees_current": 3,
+      "date_issued": "2023-11-25",
+      "rate": 12,
+      "isPayed": true
+    },
+    {
+      "global": 500000,
+      "parcial": 30000,
+      "fees_global": 18,
+      "fees_current": 1,
+      "date_issued": "2023-10-12",
+      "rate": 15,
+      "isPayed": false
+    },
+    {
+      "global": 600000,
+      "parcial": 35000,
+      "fees_global": 20,
+      "fees_current": 4,
+      "date_issued": "2023-09-08",
+      "rate": 8,
+      "isPayed": true
+    }
+  ],
+  "transactions": [
+    {
+      "description": "Claro",
+      "date": "2023-12-17",
+      "amount": 10000.55,
+      "type": "CREDITO",
+      "state": "COMPLETADO"
+    },
+    {
+      "description": "Pago de internet",
+      "date": "2023-12-18",
+      "amount": 5000.12,
+      "type": "DEBITO",
+      "state": "RECHAZADO"
+    },
+    {
+      "description": "Salario",
+      "date": "2023-12-19",
+      "amount": 12000.16,
+      "type": "DEBITO",
+      "state": "PENDIENTE"
+    },
+    {
+      "description": "Retiro en caja",
+      "date": "2023-12-20",
+      "amount": 15000.0,
+      "type": "CREDITO",
+      "state": "COMPLETADO"
+    },
+    {
+      "description": "Préstamo amigo",
+      "date": "2023-12-21",
+      "amount": 10000.04,
+      "type": "CREDITO",
+      "state": "RECHAZADO"
+    },
+    {
+      "description": "",
+      "date": "2023-12-22",
+      "amount": 8000,
+      "type": "DEBITO",
+      "state": "PENDIENTE"
+    },
+    {
+      "description": "",
+      "date": "2023-12-17",
+      "amount": 6130.55,
+      "type": "CREDITO",
+      "state": "COMPLETADO"
+    },
+    {
+      "description": "",
+      "date": "2023-12-18",
+      "amount": 654.12,
+      "type": "CREDITO",
+      "state": "RECHAZADO"
+    },
+    {
+      "description": "",
+      "date": "2023-12-19",
+      "amount": 1634.16,
+      "type": "CREDITO",
+      "state": "PENDIENTE"
+    },
+    {
+      "description": "",
+      "date": "2023-12-20",
+      "amount": 98.0,
+      "type": "DEBITO",
+      "state": "COMPLETADO"
+    },
+    {
+      "description": "",
+      "date": "2023-12-21",
+      "amount": 8000.04,
+      "type": "DEBITO",
+      "state": "RECHAZADO"
+    },
+    {
+      "description": "",
+      "date": "2023-12-22",
+      "amount": 8000,
+      "type": "CREDITO",
+      "state": "PENDIENTE"
+    }
+  ]
+}

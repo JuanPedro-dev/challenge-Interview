@@ -5,22 +5,23 @@
         <app-navbar [userName]="user.name"></app-navbar>
 
         <h1 class="title">Inicio</h1>
-        
-        <!-- aca reemplazaría por otro <router-outlet></router-outlet> y cambiaría la navegación según el menu navigator-->
+
         <div>
             <div class="layout-row">
-                <app-card [card]="user.cards[0]" ></app-card>
-                <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="user.cards[0].credits" [tittle]="'Ingresos'"></app-chart>   
-                <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="user.cards[0].debits" [tittle]="'Egreso'"></app-chart>   
+                <div *ngFor="let card of user.cards">
+                    <app-card [card]="card"></app-card>
+                </div>
+                <app-chart [colorsInput]="['#282f65']" [nameIcon]="'paid'" [dataSeries]="dataCredits" [tittle]="'Ingresos'"></app-chart>   
+                <app-chart [colorsInput]="['#38d2ed']" [nameIcon]="'paid'" [dataSeries]="dataDebits" [tittle]="'Egreso'"></app-chart>   
             </div>
 
             <div class="layout-row">
-                <app-balance [card]="user.cards[0]"></app-balance>
-                <app-transactions></app-transactions>
+                <app-balance [dataCredits]="dataCredits" [dataDebits]="dataDebits"></app-balance>
+                <app-transactions [dataSource]="user.transactions"></app-transactions>
             </div>
             
             <div class="layout-row">
-                <app-payment-table></app-payment-table>
+                <app-payment-table [dataInvoices]="user.invoices" ></app-payment-table>
             </div>
         </div>
     </div>

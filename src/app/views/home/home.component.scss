@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --font-family-primary: "Poppins", sans-serif;
+}
+
 .home {
   color: black;
   word-wrap: break-word;
@@ -11,12 +17,29 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  position: relative;
+}
+
+#wave {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  z-index: 10;
 }
 
 .hero--img {
   flex-basis: 250px;
   max-height: 80vh;
   display: none;
+  z-index: 20;
+  
+}
+
+.tittle {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 45px;
 }
 
 @media screen and (min-width: 940px) {
@@ -26,10 +49,37 @@
 }
 
 .hero--info {
+  z-index: 20;
   min-height: 80vh;
   flex-direction: column;
+  align-items: center;
+
   & h1 {
     line-height: 4rem;
   }
+  @media screen and (min-width: 450px) {
+    & {
+      align-items: start;
+    }
+  }
 }
+
+button {
+  background-color: var(--primary-dark) !important;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, #5914a9 0%, rgba(81, 29, 141, 0.87) 100%);
+  color: #fff;
+  font-family: var(--font-family-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
 

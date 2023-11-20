@@ -1,24 +1,38 @@
 <div class="home">
-    <section class="hero container-center" uk-grid>
-  
-      <div class="hero--info container-center text-center mt-2" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-        <h1 class="h2 mb-2">Bienvenido</h1>
-        <h3 class="h3 mb-2">Espero le agrade el proyecto</h3>
-        <div>
-            <button mat-raised-button routerLink="/login" color="primary" class="mr-2">Iniciar Sesión</button>
-            <button mat-raised-button routerLink="/register" color="primary">Registrarse</button>
-        </div>
-      </div>
-      
-      <img class="hero--img" src="https://freepngdownload.com/image/thumb/business-man-png-free-image-download-33.png" alt="business man image" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-  
-    </section>
 
-    <section>
-      <p> <strong>Disclaimer: </strong> En este proyecto, se realizo con un enfoque de POC (Proof of Concept), no se generaron servicios de autenticación, guards, etc, sino que mi enfoque fue en responsive, uso de librerías, gráficos, componentes, lazy load, etc.</p>
-      <p>Al igual que la API Rest, tengo varios proyectos que puedo mostrar y explicar con mucho gusto.</p>
-      <button mat-raised-button routerLink="/dashboard" color="primary">Dashboard</button>
-    </section>
+  <section class="hero container-center" uk-grid>
+
+
+    <img class="hero--img" src="https://images.pexels.com/photos/5908756/pexels-photo-5908756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="business man image" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+
+    <div class="hero--info container-center text-center mt-2" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+      <h1 class="h2 mb-2 tittle">Bienvenido</h1>
+      <h3 class="h3 mb-2">Espero le agrade el proyecto</h3>
+      <div class="btn">
+        <button mat-raised-button routerLink="/login" color="primary">Iniciar Sesión</button>
+        <button mat-raised-button routerLink="/register" color="primary">Registrarse</button>
+      </div>
+    </div>
+
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="#a57cd4" offset="0%"></stop>
+          <stop stop-color="#5914a9" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,37L26.7,37C53.3,37,107,37,160,43.2C213.3,49,267,62,320,55.5C373.3,49,427,25,480,30.8C533.3,37,587,74,640,117.2C693.3,160,747,210,800,197.3C853.3,185,907,111,960,98.7C1013.3,86,1067,136,1120,172.7C1173.3,210,1227,234,1280,240.5C1333.3,247,1387,234,1440,191.2C1493.3,148,1547,74,1600,86.3C1653.3,99,1707,197,1760,209.7C1813.3,222,1867,148,1920,117.2C1973.3,86,2027,99,2080,86.3C2133.3,74,2187,37,2240,43.2C2293.3,49,2347,99,2400,129.5C2453.3,160,2507,173,2560,172.7C2613.3,173,2667,160,2720,148C2773.3,136,2827,123,2880,98.7C2933.3,74,2987,37,3040,74C3093.3,111,3147,222,3200,265.2C3253.3,308,3307,284,3360,240.5C3413.3,197,3467,136,3520,148C3573.3,160,3627,247,3680,246.7C3733.3,247,3787,160,3813,117.2L3840,74L3840,370L3813.3,370C3786.7,370,3733,370,3680,370C3626.7,370,3573,370,3520,370C3466.7,370,3413,370,3360,370C3306.7,370,3253,370,3200,370C3146.7,370,3093,370,3040,370C2986.7,370,2933,370,2880,370C2826.7,370,2773,370,2720,370C2666.7,370,2613,370,2560,370C2506.7,370,2453,370,2400,370C2346.7,370,2293,370,2240,370C2186.7,370,2133,370,2080,370C2026.7,370,1973,370,1920,370C1866.7,370,1813,370,1760,370C1706.7,370,1653,370,1600,370C1546.7,370,1493,370,1440,370C1386.7,370,1333,370,1280,370C1226.7,370,1173,370,1120,370C1066.7,370,1013,370,960,370C906.7,370,853,370,800,370C746.7,370,693,370,640,370C586.7,370,533,370,480,370C426.7,370,373,370,320,370C266.7,370,213,370,160,370C106.7,370,53,370,27,370L0,370Z">
+      </path>
+    </svg>
+  </section>
+
+  <section [ngStyle]="{marginTop: '3rem'}">
+    <p [ngStyle]="{ textAlign: 'left', margin: '2rem'}"> <strong>Disclaimer: </strong> En este proyecto, se realizo con un enfoque de POC (Proof of Concept), no se
+      generaron servicios de autenticación, guards, etc, sino que mi enfoque fue en responsive, uso de librerías,
+      gráficos, componentes, lazy load, consumo de API con HttpClient, etc.</p>
+    <button mat-raised-button routerLink="/dashboard" color="primary">Dashboard</button>
+  </section>
 
 </div>
-

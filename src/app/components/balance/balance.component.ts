@@ -15,7 +15,8 @@ import {
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { MatIconModule } from '@angular/material/icon';
-import { Card } from 'src/app/interfaces/client';
+import { Transaction } from 'src/app/interfaces/client';
+
 
 @Component({
   selector: 'app-balance',
@@ -35,16 +36,8 @@ export class BalanceComponent implements OnInit {
   public yaxis!: ApexYAxis;
   public xaxis!: ApexXAxis;
 
-  @Input() card: Card = {
-    id: 0,
-    alias: '',
-    key_security: 0,
-    balance: 0,
-    debits: [],
-    credits: [],
-    expiration: new Date(),
-    card_number: ''
-  };  
+  @Input() dataCredits!: Transaction[];
+  @Input() dataDebits!: Transaction[];
 
   public myBgc: object = {};
 
@@ -53,16 +46,6 @@ export class BalanceComponent implements OnInit {
   }
 
   public initChartData(): void {
-    let dataCredits: number[] = []; 
-    let dataDebits: number[] = []; 
-
-    for(let i=0; i < this.card.credits.length; i++){
-      dataCredits.push(this.card.credits[i].amount);
-    }
-
-    for(let i=0; i < this.card.debits.length; i++){
-      dataDebits.push(this.card.debits[i].amount);
-    }
 
     this.chart= {
       type: 'bar',
@@ -106,23 +89,16 @@ export class BalanceComponent implements OnInit {
     this.series = [
       {
         name: 'Débito',
-        data: dataDebits
+        data: this.dataDebits.map(debit => debit.amount)
       },
       {
         name: 'Crédito',
-        data: dataCredits
+        data: this.dataCredits.map(debit => debit.amount)
       }
     ];    
     this.yaxis = { show: false };
     this.xaxis = {
       labels: { show: false }
     };
-
-
-
-
-    
-
-
   }
 }

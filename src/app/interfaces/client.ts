@@ -1,9 +1,12 @@
-import { Invoice } from "./invoices";
+import { Invoice } from './invoices';
 
-export interface transaction {
+export interface Transaction {
   id: number;
   date: Date;
   amount: number;
+  description: string;
+  state: string;
+  type: string;
 }
 
 export interface Card {
@@ -12,8 +15,6 @@ export interface Card {
   alias: string;
   key_security: number;
   balance: number;
-  debits: transaction[];
-  credits: transaction[];
   expiration: Date;
 }
 
@@ -24,8 +25,6 @@ export class Card implements Card {
     public alias: string,
     public key_security: number,
     public balance: number,
-    public debits: transaction[],
-    public credits: transaction[],
     public expiration: Date
   ) {}
 }
@@ -36,7 +35,8 @@ export interface Client {
   password: string;
   balance: number;
   cards: Card[];
-  invoices: Invoice[]
+  invoices: Invoice[];
+  transactions: Transaction[];
 }
 
 export class Client implements Client {
@@ -47,6 +47,7 @@ export class Client implements Client {
     public balance: number,
     public cards: Card[],
     public invoices: Invoice[],
+    public transactions: Transaction[]
   ) {
     this.id = id;
     this.name = name;
@@ -54,5 +55,6 @@ export class Client implements Client {
     this.balance = balance;
     this.cards = cards;
     this.invoices = invoices;
+    this.transactions = transactions;
   }
 }

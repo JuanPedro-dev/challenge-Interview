@@ -12,14 +12,13 @@ import { Card } from 'src/app/interfaces/client';
 export class CardComponent {
   @Input() card: Card =  {
     id: 0,
+    card_number: '',
     alias: '',
     key_security: 0,
     balance: 0,
-    debits: [],
-    credits: [],
-    expiration: new Date(),
-    card_number: ''
+    expiration: new Date()
   }
 
+  
 
 }
